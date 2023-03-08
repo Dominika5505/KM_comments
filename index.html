@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="log-out">Log out</a>
+        <a href="#" class="register-popup-btn">Register</a>
+        <button class="login-popup-btn btn">Login</button>
+    </header>
+
+    <div class="login-container">
+
+        <div class="login-wrapper">
+            <!-- <div class="login-blur"></div> -->
+            <span class="icon-close">x</span>
+            <div class="login-form-box login">
+                <h2>Login</h2>
+                <form action="#" id="login-form">
+                    <div class="input-box">
+                        <input type="email" name="" id="login-email" class="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="" id="password" class="password" required>
+                        <label>Password</label>
+                    </div>
+                    <p class="auth-error-msg"></p>
+                    <button type="submit" class="btn auth-btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="login-form-box register">
+                <h2>Register</h2>
+                <form action="#" id="register-form">
+                    <div class="input-box">
+                        <input type="text" name="" id="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="" id="register-email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="" id="password1" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="" id="password2" required>
+                        <label>Confirm Password</label>
+                    </div>
+                    <p class="auth-error-msg"></p>
+                    <button type="submit" class="btn auth-btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="add-comment">
+            <div class="not-logged-in">
+                <p>To add a comment please <a href="#">login</a> or <a href="#">register</a>.</p>
+            </div>
+        </div>
+
+        <div class="comments-wrap">
+        </div>
+        
+    </div>
+</body>
+</html>

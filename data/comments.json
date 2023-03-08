@@ -1,0 +1,23 @@
+{
+    "comments": [
+        {
+            "id": 1,
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus leo at suscipit interdum. Donec nibh metus, imperdiet varius ultricies sed, pulvinar in tortor. In non lorem rhoncus, aliquet eros quis, lobortis magna. Nunc iaculis eget nisi sed rhoncus. Cras viverra interdum ligula, ac auctor nisl hendrerit eget. Ut ullamcorper ipsum at risus placerat, sit amet vulputate sem aliquet. Fusce sollicitudin justo eget laoreet condimentum.",
+            "time": "2001-03-12",
+            "replies": [
+                {
+                    "id": 2,
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus leo at suscipit interdum. Donec nibh metus, imperdiet varius ultricies sed, pulvinar in tortor. In non lorem rhoncus, aliquet eros quis, lobortis magna. Nunc iaculis eget nisi sed rhoncus. Cras viverra interdum ligula, ac auctor nisl hendrerit eget. Ut ullamcorper ipsum at risus placerat, sit amet vulputate sem aliquet. Fusce sollicitudin justo eget laoreet condimentum.",
+                    "time": "2001-03-12",
+                    "replies" : []
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus leo at suscipit interdum. Donec nibh metus, imperdiet varius ultricies sed, pulvinar in tortor.",
+            "time": "2001-03-12",
+            "replies" : []
+        }
+    ]
+}

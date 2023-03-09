@@ -387,7 +387,10 @@ function addNewComment(e, parentId) {
             let username = localStorage.getItem('loggedIn');
 
             let today = new Date();
-            let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            let hours = String(today.getHours()).padStart(2, '0');
+            let minutes = String(today.getMinutes()).padStart(2, '0');
+            let seconds = String(today.getSeconds()).padStart(2, '0');
+            let time = hours + ":" + minutes + ":" + seconds;
             
             let newComment = new Comment(generateNewId(), parentId, content, time, username);
             newComment.storeComment();

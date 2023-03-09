@@ -10,85 +10,65 @@ body {
 }
 
 .btn {
-    width: 150px;
-    height: 50px;
+    padding: 15px 30px;
     border-radius: 8px;   
     transition-duration: .2s;
     cursor: pointer;
     outline: none;
 }
 
-.reply-btn {
-    border: 2px solid #00325A;
-    background-color: #FFF;
-    color: #00325A;
-}
-
-.reply-btn:hover {
-    background-color: #00325A;
-    color: #FFF;
-}
-
-.add-comment-btn {
-    background-color: #FFF;
-    color: #DE5050;
-}
-
-.add-comment-btn:hover {
-    background-color: #DE5050;
-    color: #FFF;
-}
-
-.inapprop-wording-msg {
-    color: #FF8300;
-}
 
 .container {
     width: 70%;
-    min-height: 90vh;
+    min-height: 100vh;
     margin: 0 15%;
     background-color: #F5F5F5;
+    overflow: hidden;
 }
+
 
 /* Header */
 
 header {
     width: 100%;
-    height: 10vh;
-    background-color: #00325A;
+    background-color: #DE5050;
+    border-radius: 0 0 10px 10px;
     display: flex;
     align-items: center;
     justify-content: end;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 header a {
     color: #FFF;
     text-decoration: none;
     margin-left: 20px;
+    padding: 20px;
+    transition-duration: .2s;
 }
+
 
 header a:hover {
     text-decoration: underline;
+    
 }
 
-.login-popup-btn {
+.login-popup-btn, .log-out {
     font-size: 18px;
     margin-left: 20px;
-    background: transparent;
-    color: #FFF;
-    border-color: #FFF;
-
+    background: #FFF;
+    color: #DE5050;
+    border-radius: 50px;
+    /* height: 60px; */
+    border: none;
 }
 
-.login-popup-btn:hover {
-    background-color: #FFF;
-    color: #00325A;
+.login-popup-btn:hover, .log-out:hover {
+    color: #FFF;
+    background-color: #00325A;
 }
 
 /* Login */
-
-
 .login-container {
     position: absolute;
     top: 0;
@@ -264,20 +244,241 @@ header a:hover {
 
 /* Comments */
 
-.comments-wrap {
-    padding: 5% 10%;
+
+.add-comment {
+    padding: 5% 8%;
 }
 
 .not-logged-in {
+    display: none;
     width: 100%;
-    /* height: 50px; */
-    background-color: #E9E9E9;
-    padding: 20px 30px;
+    background-color: #00325A;
+    padding: 40px 30px;
     border-radius: 10px;
+}
+
+.not-logged-in.active { 
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .not-logged-in p {
-    color: #555;
+    color: #FFF;
 }
+
+.not-logged-in a {
+    color: #DE5050;
+    text-decoration: none;
+}
+
+.comments-wrap {
+    padding: 5% 8%;
+}
+
+.comment-card-wrap {
+    margin: 20px 0;
+}
+
+.comment-card-wrap .comment-card-wrap:not(:first-child) {
+    padding-left: 2em;
+    border-left: 2px solid rgba(0, 50, 90, 0.1);
+
+}
+
+.comment-card {
+    width: 100%;
+    background-color: #FBFBFB;
+    color: #555;
+    padding: 20px 30px;
+    border: none;
+    box-shadow: 0 0 3px #E9E9E9;
+    border-radius: 20px;
+}
+
+.username-time-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.username-time-wrap p {
+    color: rgba(0, 50, 90, 0.8);
+    font-size: .8em;
+    margin: 0;
+}
+
+.comment-content {
+    margin: 30px 0;
+}
+
+.reply-btn {
+    border: 2px solid #00325A;
+    background-color: #FFF;
+    color: #00325A;
+    display: none;
+    padding: 10px 30px;
+}
+
+.reply-btn:hover {
+    background-color: #00325A;
+    color: #FFF;
+}
+
+.reply-form {
+    position: relative;
+    display: none;
+}
+
+.reply-form.active, .reply-btn.active {
+    display: block;
+}
+
+.add-comment-msg-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-comment-msg-wrap p {
+    color: #FF8300;
+    font-size: .9em;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    height: 100px;
+    border: none;
+    box-shadow: 0 0 1px #E9E9E9;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+textarea::placeholder {
+    color: rgba(0, 50, 90, 0.7);
+}
+
+
+.add-comment-btn {
+    background-color: #FFF;
+    color: #DE5050;
+    border: none;
+    box-shadow: 0 0 3px #E9E9E9;
+}
+
+.add-comment-btn:hover {
+    background-color: #DE5050;
+    color: #FFF;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .login-popup-btn, .log-out {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 15px 20px;
+    }
+    
+    .reply-btn {
+        font-size: .9em;
+        padding: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+
+    .login-form-box {
+        padding: 30px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .login-popup-btn, .log-out {
+        font-size: 14px;
+    }
+
+    .comment-content {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        padding: 14px 18px;
+        font-size: .9em;
+    }
+    
+    .reply-btn {
+        font-size: .8em;
+        padding: 8px 18px;
+    }
+
+    .add-comment-msg-wrap p {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        border-radius: 0;
+    }
+
+}
+@media only screen and (max-width: 600px) {
+
+    .comments-wrap, .add-comment {
+        padding: 4%;
+    }
+
+    .comment-card-wrap .comment-card-wrap:not(:first-child) {
+        padding-left: 1em; 
+    }
+
+    textarea {
+        padding: 15px;
+    }
+
+    .comment-card {
+        padding: 20px;
+    }
+
+    .add-comment-msg-wrap {
+        flex-direction:column-reverse;
+    }
+
+    .add-comment-btn {
+        width: 100%;
+    }
+
+    
+    .add-comment-msg-wrap p {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+

@@ -407,7 +407,7 @@ function generateNewId() {
 }
 
 async function checkInapprWords(content) {
-    const res = await fetch('./data/inappropriate_words.json')
+    const res = await fetch('https://raw.githubusercontent.com/Dominika5505/KM_comments/master/data/inappropriate_words.json')
   
     let inappropriateWords = await res.json();
 
